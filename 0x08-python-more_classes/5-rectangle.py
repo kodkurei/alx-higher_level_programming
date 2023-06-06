@@ -5,10 +5,10 @@
 class Rectangle:
     """contents of class Rectangle"""
     def __init__(self, width=0, height=0):
-    """ Initialization
-    Args:
-        width (int) - width of the rectangle
-        height (int) - height of the rectangle
+        """ Initialization
+        Args:
+            width (int) - width of the rectangle
+            height (int) - height of the rectangle
         """
         self.height = height
         self.width = width
@@ -51,9 +51,9 @@ class Rectangle:
 
     def __str__(self):
         """return the printable represenrtation of the rectangle.
+
         Represents the rectangle with the # character.
         """
-
         if self.__width == 0 or self.__height == 0:
             return ("")
 
