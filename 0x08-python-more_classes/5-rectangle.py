@@ -2,12 +2,10 @@
 """Defination of a class Rectangle"""
 
 
-class Rectangle:
+class Rectangle
     """contents of class Rectangle"""
-
     def __init__(self, width=0, height=0):
         """Initialization of a rectangle
-
         Args:
             width (int) - width of the rectangle
             height (int) - height of the rectangle
@@ -24,20 +22,20 @@ class Rectangle:
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
         """get/set the value of width"""
-        return self.__width
+        return (self.__width)
 
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -50,7 +48,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return((self.__height * 2) + (self.__width * 2))
-
     def __str__(self):
         """return the printable represenrtation of the rectangle.
 
@@ -64,8 +61,8 @@ class Rectangle:
             [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
-        return ("".join(rect))
 
+        return ("".join(rect))
     def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
@@ -75,4 +72,3 @@ class Rectangle:
     def __del__(self_):
         """Print a message for every deletion of a Rectangle."""
         print("Bye rectangleBye rectangle...")
-
